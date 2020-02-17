@@ -110,6 +110,7 @@ A chess-like game with a laser twist created with Unity3D
 ## Ways to improve the game
 
 - The code could be a bit more organized and data - more encapsulated.
+- Various components could be cached more aggressively. Currently there are a lot of places in code where certain components are often obtained via GetComponent (for example the "selectedPiece" of the HumanPlayer which is cached as a GameObject instead of as a Piece component, the corresponding piece for each of the AIPlayer's move / attack commands is also stored as a GameObject instead of as a Piece when in fact they mostly require the Piece API and always obtain the component in place).
 - The AI Player's decision making could be improved:
   - The CommandUnit could start using MinMax algorithm to choose a move. Currently it just chooses a path where there's no direct threat from a piece controlled by the opponent.
 - The AI Player's difficulty could also be made to scale. It could use a MinMax algorithm for all of it's moves with a different depth for each difficulty level.
@@ -124,6 +125,6 @@ A chess-like game with a laser twist created with Unity3D
 - Players could choose the starting configuration of their pieces.
 - Additional new mechanics could be added (i.e. taking control of enemy pieces, banishing an enemy piece from play for a few turns, etc.)
 - Different boards sizes of boards could be added (i.e. a 16x16 board or a board in the shape of a triangle, with equal sides).
-- Boards could provide terrain bonuses (i.e. there could be squares that provide jumpships +1 attack power when attacking from them).
+- Boards could provide terrain bonuses (i.e. there could be squares that provide Jumpships +1 attack power when attacking from them).
 - A "pause game" mechanic could be implemented.
 - A replay system could be implemented (each action could be like a command and the state before its execution could be saved).
