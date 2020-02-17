@@ -420,10 +420,7 @@ public class HumanPlayer : Player
 
     private void EndTurn()
     {
-        if (phase == Phase.Idle)
-        {
-            phase = Phase.WaitTurn;
-            DeselectPiece();
-        }
+        phase = Phase.WaitTurn;
+        DeselectPiece();
     }
 }
