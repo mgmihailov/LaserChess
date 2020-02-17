@@ -77,7 +77,7 @@ public class Game : MonoBehaviour
         players[1] = GetComponent<AIPlayer>();
         players[1].OnVictory += OnPlayerVictory;
 
-        currentPlayerIdx = Random.Range(0, 2);
+        currentPlayerIdx = 0;
 
         UserInterface.Initialize(players[0] as HumanPlayer);
         UserInterface.AddOnNextLevelButtonClickListener(OnUINextLevelButtonClick);
@@ -421,7 +421,7 @@ public class Game : MonoBehaviour
 
         Board.Instance.Reset();
 
-        currentPlayerIdx = Random.Range(0, 2);
+        currentPlayerIdx = 0;
     }
 
 
