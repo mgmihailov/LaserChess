@@ -220,68 +220,6 @@ public class Game : MonoBehaviour
             case 1:
                 {
                     // Human pieces
-
-                    // Grunts
-                    for (int i = 0; i < Board.Columns; i += 2)
-                    {
-                        config.Add(new SquareInitData
-                        {
-                            type = PieceType.Grunt,
-                            ownership = Piece.Ownership.Human,
-                            gridPosition = new Vector2Int(Board.Rows - 2, i),
-                        });
-                    }
-
-                    // JumpShips
-                    for (int i = 1; i < Board.Columns; i += 2)
-                    {
-                        config.Add(new SquareInitData
-                        {
-                            type = PieceType.JumpShip,
-                            ownership = Piece.Ownership.Human,
-                            gridPosition = new Vector2Int(Board.Rows - 2, i),
-                        });
-                    }
-
-                    // AI pieces
-
-                    // Drones
-                    for (int i = 0; i < Board.Columns; ++i)
-                    {
-                        config.Add(new SquareInitData
-                        {
-                            type = PieceType.Drone,
-                            ownership = Piece.Ownership.AI,
-                            gridPosition = new Vector2Int(3, i),
-                        });
-                    }
-
-                    // Dreadnoughts
-                    config.Add(new SquareInitData
-                    {
-                        type = PieceType.Dreadnought,
-                        ownership = Piece.Ownership.AI,
-                        gridPosition = new Vector2Int(2, 3),
-                    });
-                    config.Add(new SquareInitData
-                    {
-                        type = PieceType.Dreadnought,
-                        ownership = Piece.Ownership.AI,
-                        gridPosition = new Vector2Int(2, 4),
-                    });
-
-                    // CommandUnits
-                    config.Add(new SquareInitData
-                    {
-                        type = PieceType.CommandUnit,
-                        ownership = Piece.Ownership.AI,
-                        gridPosition = new Vector2Int(0, 3),
-                    });
-                }
-                break;
-            case 2:
-                {
-                    // Human pieces
                     for (int i = 0; i < Board.Columns; ++i)
                     {
                         config.Add(new SquareInitData
@@ -354,6 +292,68 @@ public class Game : MonoBehaviour
                             gridPosition = new Vector2Int(1, i),
                         });
                     }
+                }
+                break;
+            case 2:
+                {
+                    // Human pieces
+
+                    // Grunts
+                    for (int i = 0; i < Board.Columns; i += 2)
+                    {
+                        config.Add(new SquareInitData
+                        {
+                            type = PieceType.Grunt,
+                            ownership = Piece.Ownership.Human,
+                            gridPosition = new Vector2Int(Board.Rows - 2, i),
+                        });
+                    }
+
+                    // JumpShips
+                    for (int i = 1; i < Board.Columns; i += 2)
+                    {
+                        config.Add(new SquareInitData
+                        {
+                            type = PieceType.JumpShip,
+                            ownership = Piece.Ownership.Human,
+                            gridPosition = new Vector2Int(Board.Rows - 2, i),
+                        });
+                    }
+
+                    // AI pieces
+
+                    // Drones
+                    for (int i = 0; i < Board.Columns; ++i)
+                    {
+                        config.Add(new SquareInitData
+                        {
+                            type = PieceType.Drone,
+                            ownership = Piece.Ownership.AI,
+                            gridPosition = new Vector2Int(3, i),
+                        });
+                    }
+
+                    // Dreadnoughts
+                    config.Add(new SquareInitData
+                    {
+                        type = PieceType.Dreadnought,
+                        ownership = Piece.Ownership.AI,
+                        gridPosition = new Vector2Int(2, 3),
+                    });
+                    config.Add(new SquareInitData
+                    {
+                        type = PieceType.Dreadnought,
+                        ownership = Piece.Ownership.AI,
+                        gridPosition = new Vector2Int(2, 4),
+                    });
+
+                    // CommandUnits
+                    config.Add(new SquareInitData
+                    {
+                        type = PieceType.CommandUnit,
+                        ownership = Piece.Ownership.AI,
+                        gridPosition = new Vector2Int(0, 3),
+                    });
                 }
                 break;
         }
