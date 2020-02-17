@@ -411,7 +411,10 @@ public class HumanPlayer : Player
         }
         else
         {
-            DeselectPiece();
+            if (phase == Phase.Idle)
+            {
+                DeselectPiece();
+            }
         }
     }
 
