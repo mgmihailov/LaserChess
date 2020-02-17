@@ -125,3 +125,5 @@ Assets/Scenes - Contains the single scene (so far) of the game.
 - Additional new mechanics could be added (i.e. taking control of enemy pieces, banishing an enemy piece from play for a few turns, etc.)
 - Different boards sizes of boards could be added (i.e. a 16x16 board or a board in the shape of a triangle, with equal sides).
 - Boards could provide terrain bonuses (i.e. there could be squares that provide jumpships +1 attack power when attacking from them).
+- A "pause game" mechanic could be implemented.
+- A replay system could be implemented (each action could be like a command and the state before its execution could be saved).
