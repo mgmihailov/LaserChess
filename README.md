@@ -87,11 +87,11 @@ A chess-like game with a laser twist created with Unity3D
 
 ## Folder structure
 
-Assets/Scripts - Contains all the gameplay logic for the LaserChess game.
-Assets/Prefabs - Contains mostly the different pieces as Prefabs, plus each piece's UI, with the buttons and the HP / AP info.
-Assets/Sprites - Contains the icons used for the different buttons from the piece UI.
-Assets/Materials - Contains the materials for each piece.
-Assets/Scenes - Contains the single scene (so far) of the game.
+* Assets/Scripts - Contains all the gameplay logic for the LaserChess game.
+* Assets/Prefabs - Contains mostly the different pieces as Prefabs, plus each piece's UI, with the buttons and the HP / AP info.
+* Assets/Sprites - Contains the icons used for the different buttons from the piece UI.
+* Assets/Materials - Contains the materials for each piece.
+* Assets/Scenes - Contains the single scene (so far) of the game.
 
 ## Legend
 
